@@ -1,0 +1,19 @@
+{
+  "name": "eslint-prettier-config",
+  "version": "1.0.0",
+  "description": "LQ's ESLint and Prettier Configs",
+  "private": true,
+  "scripts": {
+    "build": "lerna run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Quan Bach <long_quan_bach@hotmail.com> (https://github.com/lqbach/)",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "lerna": "^7.4.2",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
+  }
+}
