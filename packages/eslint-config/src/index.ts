@@ -7,11 +7,11 @@ import {
   parserVue,
   jsConfig,
   configPrettier,
-} from "./libs";
+} from "./libs"
 
-import { ConfigParams, ConfigObject } from "./types";
+import { ConfigParams, ConfigObject } from "./types"
 
-import globals from "globals";
+import globals from "globals"
 
 export default function config(params: ConfigParams) {
   // TypeScript Config
@@ -32,7 +32,7 @@ export default function config(params: ConfigParams) {
             ...pluginTypeScript.configs.recommended.rules,
           },
         }
-      : {};
+      : {}
 
   // React Config: turned off by default
   const reactConfig: ConfigObject =
@@ -46,7 +46,7 @@ export default function config(params: ConfigParams) {
             ...pluginReact.configs.recommended.rules,
           },
         }
-      : {};
+      : {}
 
   // Vue Config: turned off by default
   const vueConfig: ConfigObject =
@@ -66,7 +66,7 @@ export default function config(params: ConfigParams) {
             ...pluginVue.configs["vue3-strongly-recommended"].rules,
           },
         }
-      : {};
+      : {}
 
   return [
     // Files to ignore
@@ -135,5 +135,5 @@ export default function config(params: ConfigParams) {
     },
 
     configPrettier,
-  ];
+  ]
 }

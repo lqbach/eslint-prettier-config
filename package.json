@@ -1,7 +1,6 @@
 {
   "name": "eslint-prettier-config",
   "type": "module",
-  "version": "1.0.0",
   "description": "LQ's ESLint and Prettier Configs",
   "private": true,
   "scripts": {

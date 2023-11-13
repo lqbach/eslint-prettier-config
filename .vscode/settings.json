@@ -1,0 +1,9 @@
+{
+  // Format on save with Prettier rules
+  "editor.formatOnSave": true,
+
+  // Tell the ESLint plugin to run on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
