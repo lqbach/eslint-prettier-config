@@ -76,7 +76,7 @@ jobs:
         run: pnpm run build
 
       - name: Publish Packages
-        run: pnpm publish --provenance -r --access public
+        run: pnpm publish -r --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
