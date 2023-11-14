@@ -13,7 +13,7 @@ import { ConfigParams, ConfigObject } from "./types"
 
 import globals from "globals"
 
-export default function config(params: ConfigParams) {
+export default function config(params: ConfigParams = {}) {
   // TypeScript Config
   const typescriptConfig: ConfigObject =
     params.typescript ?? true

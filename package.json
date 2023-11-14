@@ -6,7 +6,11 @@
   "scripts": {
     "build": "lerna run build",
     "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier . --check",
+    "format:fix": "prettier . --write",
+    "check": "npm run lint && npm run format",
+    "test": "npm run check",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "Quan Bach <long_quan_bach@hotmail.com> (https://github.com/lqbach/)",
@@ -17,6 +21,7 @@
     "lerna": "^7.4.2",
     "prettier": "^3.1.0",
     "tsup": "^7.2.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "husky": "^8.0.0"
   }
 }
