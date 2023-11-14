@@ -2,7 +2,7 @@
   "name": "eslint-prettier-config",
   "type": "module",
   "description": "lqbach's ESLint and Prettier Configs",
-  "private": false,
+  "private": true,
   "scripts": {
     "build": "lerna run build",
     "lint": "eslint .",

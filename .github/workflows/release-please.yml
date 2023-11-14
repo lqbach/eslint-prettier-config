@@ -31,6 +31,9 @@ jobs:
           monorepo-tags: true
 
   publish:
+    permissions:
+      contents: read
+      id-token: write
     if: ${{ needs.release-please.outputs.release_created }}
     needs: release-please
     runs-on: ubuntu-latest
@@ -73,7 +76,7 @@ jobs:
         run: pnpm run build
 
       - name: Publish Packages
-        run: pnpm publish -r --access public
+        run: pnpm publish --provenance -r --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
