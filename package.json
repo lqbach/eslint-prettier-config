@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "Quan Bach <long_quan_bach@hotmail.com> (https://github.com/lqbach/)",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.9.0",
     "eslint": "^8.53.0",

@@ -4,6 +4,7 @@
   "version": "0.2.2",
   "private": false,
   "description": "lqbach's Personal Prettier Config",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lqbach/eslint-prettier-config.git",
