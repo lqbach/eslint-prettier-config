@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.1.0...eslint-config-v0.2.0) (2023-11-14)
+
+
+### Features
+
+* add new repository key to package ([d63ceb7](https://github.com/lqbach/eslint-prettier-config/commit/d63ceb7e9a348efc322ecdcb5d462cee6a2b05b8))
+
 ## 0.1.0 (2023-11-14)
 
 
