@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/lqbach/eslint-prettier-config/compare/prettier-config-v0.2.0...prettier-config-v0.2.1) (2023-11-14)
+
+
+### Bug Fixes
+
+* update package visiblity ([2c332e1](https://github.com/lqbach/eslint-prettier-config/commit/2c332e19165da93881d6ee61b75560041f9a5397))
+
 ## [0.2.0](https://github.com/lqbach/eslint-prettier-config/compare/prettier-config-v0.1.0...prettier-config-v0.2.0) (2023-11-14)
 
 
