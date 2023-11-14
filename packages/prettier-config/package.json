@@ -3,6 +3,11 @@
   "type": "module",
   "version": "0.1.0",
   "description": "lqbach's Personal Prettier Config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lqbach/eslint-prettier-config.git",
+    "directory": "packages/prettier-config"
+  },
   "main": "./dist/index.js",
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --clean"

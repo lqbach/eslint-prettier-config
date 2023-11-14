@@ -3,6 +3,11 @@
   "type": "module",
   "version": "0.1.0",
   "description": "lqbach's Personal Eslint Config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lqbach/eslint-prettier-config.git",
+    "directory": "packages/eslint-config"
+  },
   "exports": {
     "./index": "./dist/index.js"
   },
