@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.2](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.2.1...eslint-config-v0.2.2) (2023-11-14)
+
+
+### Documentation 📝
+
+* add badges to eslint config readme ([afc422e](https://github.com/lqbach/eslint-prettier-config/commit/afc422eeeec6e7fe4b95b7f9c315b90a76a32ad5))
+* add new readme docs ([b2b0044](https://github.com/lqbach/eslint-prettier-config/commit/b2b004442723e81299e10a2945e9f616324ac06a))
+
 ## [0.2.1](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.2.0...eslint-config-v0.2.1) (2023-11-14)
 
 
