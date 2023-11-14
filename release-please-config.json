@@ -16,7 +16,7 @@
     },
     {
       "type": "linked-versions",
-      "groupName": "my group",
+      "groupName": "ESLint Prettier Configuration",
       "components": ["eslint-config", "prettier-config"]
     }
   ]
