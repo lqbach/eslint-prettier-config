@@ -2,7 +2,7 @@
   "name": "@lqbach/eslint-config",
   "type": "module",
   "version": "0.1.0",
-  "description": "Quan's Personal Eslint Config",
+  "description": "lqbach's Personal Eslint Config",
   "exports": {
     "./index": "./dist/index.js"
   },

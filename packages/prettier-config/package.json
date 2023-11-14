@@ -2,7 +2,7 @@
   "name": "@lqbach/prettier-config",
   "type": "module",
   "version": "0.1.0",
-  "description": "Quan's Personal Prettier Config",
+  "description": "lqbach's Personal Prettier Config",
   "main": "./dist/index.js",
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --clean"
