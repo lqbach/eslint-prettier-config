@@ -2,7 +2,7 @@
   "changelog-sections": [
     { "type": "feat", "section": "Features 🚀", "hidden": false },
     { "type": "fix", "section": "Bug Fixes 🐛", "hidden": false },
-    { "type": "chore", "section": "Miscellaneous", "hidden": false },
+    { "type": "chore", "section": "Chores 🧹", "hidden": false },
     { "type": "ci", "section": "Miscellaneous", "hidden": false },
     { "type": "docs", "section": "Documentation 📝", "hidden": false },
     { "type": "style", "section": "Miscellaneous", "hidden": false },
