@@ -1,0 +1,23 @@
+{
+  "packages": {
+    "packages/eslint-config": {
+      "component": "eslint-config",
+      "release-type": "node"
+    },
+    "packages/prettier-config": {
+      "component": "prettier-config",
+      "release-type": "node"
+    }
+  },
+  "plugins": [
+    {
+      "type": "node-workspace",
+      "merge": false
+    },
+    {
+      "type": "linked-versions",
+      "groupName": "my group",
+      "components": ["eslint-config", "prettier-config"]
+    }
+  ]
+}
