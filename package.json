@@ -6,8 +6,8 @@
   "scripts": {
     "build": "lerna run build",
     "lint": "eslint .",
-    "format": "prettier . --check",
-    "format:fix": "prettier . --write",
+    "format": "prettier . --check --ignore-path .gitignore pnpm-lock.yaml",
+    "format:fix": "prettier . --write --ignore-path .gitignore pnpm-lock.yaml",
     "check": "npm run lint && npm run format",
     "prepare": "husky install"
   },
