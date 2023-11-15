@@ -7,6 +7,8 @@ import {
   parserVue,
   jsConfig,
   configPrettier,
+  pluginYaml,
+  parserYaml,
 } from "./libs"
 
 import { ConfigParams, ConfigObject } from "./types"
@@ -64,6 +66,24 @@ export default function config(params: ConfigParams = {}) {
             ...pluginVue.configs["base"].rules,
             ...pluginVue.configs["vue3-essential"].rules,
             ...pluginVue.configs["vue3-strongly-recommended"].rules,
+          },
+        }
+      : {}
+
+  // YAML Config
+  const yamlConfig: ConfigObject =
+    params.yaml ?? false
+      ? {
+          files: ["**/*.{yaml, yml}"],
+          languageOptions: {
+            parser: parserYaml,
+          },
+          plugins: {
+            yaml: pluginYaml,
+          },
+          rules: {
+            ...pluginYaml.configs["standard"],
+            ...pluginYaml.configs["prettier"],
           },
         }
       : {}
@@ -132,6 +152,7 @@ export default function config(params: ConfigParams = {}) {
       ...typescriptConfig,
       ...reactConfig,
       ...vueConfig,
+      ...yamlConfig,
     },
 
     configPrettier,
