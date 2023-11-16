@@ -8,6 +8,7 @@ export { default as pluginReact } from "eslint-plugin-react"
 export { default as pluginVue } from "eslint-plugin-vue"
 export { default as pluginYaml } from "eslint-plugin-yml"
 export { default as pluginJsonc } from "eslint-plugin-jsonc"
+export { default as pluginMarkdown } from "eslint-plugin-markdown"
 
 export { default as parserTypeScript } from "@typescript-eslint/parser"
 export { default as parserVue } from "vue-eslint-parser"

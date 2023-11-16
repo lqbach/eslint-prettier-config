@@ -25,7 +25,7 @@ export interface ConfigObject {
   ignores?: Array<string>
   languageOptions?: LanguageOptions
   linterOptions?: LinterOptions
-  processor?: object
+  processor?: object | string
   plugins?: object
   rules?: object
   settings?: object

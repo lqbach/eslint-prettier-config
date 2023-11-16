@@ -11,6 +11,7 @@ import {
   pluginYaml,
   parserYaml,
   parserJsonc,
+  pluginMarkdown,
 } from "./libs"
 
 import { ConfigParams, ConfigObject } from "./types"
@@ -111,6 +112,20 @@ export default function config(params: ConfigParams = {}) {
         }
       : {}
 
+  // Markdown Config
+  const markdownConfig: Array<ConfigObject> =
+    params.json ?? false
+      ? [
+          {
+            files: ["**/*.md"],
+            processor: "markdown/markdown",
+            plugins: {
+              markdown: pluginMarkdown,
+            },
+          },
+        ]
+      : [{}]
+
   return [
     // Files to ignore
     {
@@ -171,13 +186,12 @@ export default function config(params: ConfigParams = {}) {
       },
     },
 
-    {
-      ...typescriptConfig,
-      ...reactConfig,
-      ...vueConfig,
-      ...yamlConfig,
-      ...jsoncConfig,
-    },
+    { ...typescriptConfig },
+    { ...reactConfig },
+    { ...vueConfig },
+    { ...yamlConfig },
+    { ...jsoncConfig },
+    ...markdownConfig,
 
     configPrettier,
   ]
