@@ -3,12 +3,14 @@ import {
   pluginTypeScript,
   pluginReact,
   pluginVue,
+  pluginJsonc,
   parserTypeScript,
   parserVue,
   jsConfig,
   configPrettier,
   pluginYaml,
   parserYaml,
+  parserJsonc,
 } from "./libs"
 
 import { ConfigParams, ConfigObject } from "./types"
@@ -88,6 +90,27 @@ export default function config(params: ConfigParams = {}) {
         }
       : {}
 
+  // JSONC Config
+  const jsoncConfig: ConfigObject =
+    params.json ?? false
+      ? {
+          files: ["**/*.{json, json5, jsonc}"],
+          languageOptions: {
+            parser: parserJsonc,
+          },
+          plugins: {
+            jsonc: pluginJsonc,
+          },
+          rules: {
+            ...pluginJsonc.configs.base,
+            ...pluginJsonc.configs["recommended-with-json"],
+            ...pluginJsonc.configs["recommended-with-jsonc"],
+            ...pluginJsonc.configs["recommended-with-json5"],
+            ...pluginJsonc.configs["prettier"],
+          },
+        }
+      : {}
+
   return [
     // Files to ignore
     {
@@ -153,6 +176,7 @@ export default function config(params: ConfigParams = {}) {
       ...reactConfig,
       ...vueConfig,
       ...yamlConfig,
+      ...jsoncConfig,
     },
 
     configPrettier,
