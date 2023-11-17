@@ -17,7 +17,69 @@ import { ConfigParams, ConfigObject } from "./types"
 
 import globals from "globals"
 
-export default function config(params: ConfigParams = {}) {
+export default function config(params: ConfigParams = {}): Array<ConfigObject> {
+  // Ignores Config
+  const ignoresConfig: ConfigObject = {
+    ignores: [
+      "**/node_modules",
+      "**/dist",
+      "**/package-lock.json",
+      "**/yarn.lock",
+      "**/pnpm-lock.yaml",
+      "**/bun.lockb",
+
+      "**/output",
+      "**/coverage",
+      "**/temp",
+      "**/.nuxt",
+      "**/.next",
+      "**/.vercel",
+      "**/.changeset",
+      "**/.idea",
+      "**/.cache",
+      "**/.output",
+
+      "**/*.min.*",
+      "**/LICENSE*",
+    ],
+  }
+
+  //JavaScript Config
+  const javascriptConfig: Array<ConfigObject> = [
+    // Default
+    jsConfig.configs.recommended,
+    {
+      files: ["**/*.js", "**/*.mjs"],
+      languageOptions: {
+        ecmaVersion: 2022,
+        parserOptions: {
+          sourceType: "module",
+        },
+        globals: {
+          ...globals.browser,
+          ...globals.node,
+          ...globals.es6,
+          ...globals.commonjs,
+        },
+      },
+      plugins: {
+        "unused-imports": pluginUnusedImports,
+      },
+      rules: {
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+          "warn",
+          {
+            vars: "all",
+            varsIgnorePattern: "^_",
+            args: "after-used",
+            argsIgnorePattern: "^_",
+          },
+        ],
+      },
+    },
+  ]
+
   // TypeScript Config
   const typescriptConfig: ConfigObject =
     params.typescript ?? true
@@ -111,74 +173,17 @@ export default function config(params: ConfigParams = {}) {
         }
       : {}
 
-  return [
-    // Files to ignore
-    {
-      ignores: [
-        "**/node_modules",
-        "**/dist",
-        "**/package-lock.json",
-        "**/yarn.lock",
-        "**/pnpm-lock.yaml",
-        "**/bun.lockb",
+  const prettierConfig: ConfigObject = configPrettier
 
-        "**/output",
-        "**/coverage",
-        "**/temp",
-        "**/.nuxt",
-        "**/.next",
-        "**/.vercel",
-        "**/.changeset",
-        "**/.idea",
-        "**/.cache",
-        "**/.output",
+  let config: Array<ConfigObject> = []
+  config.push(ignoresConfig)
+  config.push(...javascriptConfig)
+  config.push(typescriptConfig)
+  config.push(reactConfig)
+  config.push(vueConfig)
+  config.push(yamlConfig)
+  config.push(jsoncConfig)
+  config.push(prettierConfig)
 
-        "**/*.min.*",
-        "**/LICENSE*",
-      ],
-    },
-
-    // Default
-    jsConfig.configs.recommended,
-    {
-      files: ["**/*.js", "**/*.mjs"],
-      languageOptions: {
-        ecmaVersion: 2022,
-        parserOptions: {
-          sourceType: "module",
-        },
-        globals: {
-          ...globals.browser,
-          ...globals.node,
-          ...globals.es6,
-          ...globals.commonjs,
-        },
-      },
-      plugins: {
-        "unused-imports": pluginUnusedImports,
-      },
-      rules: {
-        "unused-imports/no-unused-imports": "error",
-        "unused-imports/no-unused-vars": [
-          "warn",
-          {
-            vars: "all",
-            varsIgnorePattern: "^_",
-            args: "after-used",
-            argsIgnorePattern: "^_",
-          },
-        ],
-      },
-    },
-
-    {
-      ...typescriptConfig,
-      ...reactConfig,
-      ...vueConfig,
-      ...yamlConfig,
-      ...jsoncConfig,
-    },
-
-    configPrettier,
-  ]
+  return config
 }
