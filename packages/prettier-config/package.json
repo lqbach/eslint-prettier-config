@@ -14,7 +14,12 @@
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --clean"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1"
+  },
+  "peerDependenciesMeta": {
+    "@ianvs/prettier-plugin-sort-imports": {
+      "optional": true
+    }
   }
 }
