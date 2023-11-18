@@ -1,21 +1,20 @@
+import globals from "globals"
+
 import {
-  pluginUnusedImports,
-  pluginTypeScript,
-  pluginReact,
-  pluginVue,
-  pluginJsonc,
+  configPrettier,
+  jsConfig,
+  parserJsonc,
   parserTypeScript,
   parserVue,
-  jsConfig,
-  configPrettier,
-  pluginYaml,
   parserYaml,
-  parserJsonc,
+  pluginJsonc,
+  pluginReact,
+  pluginTypeScript,
+  pluginUnusedImports,
+  pluginVue,
+  pluginYaml,
 } from "./libs"
-
-import { ConfigParams, ConfigObject } from "./types"
-
-import globals from "globals"
+import { ConfigObject, ConfigParams } from "./types"
 
 export default function config(params: ConfigParams = {}): Array<ConfigObject> {
   // Ignores Config

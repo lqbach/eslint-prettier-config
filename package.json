@@ -6,21 +6,24 @@
   "scripts": {
     "build": "lerna run build",
     "lint": "eslint .",
+    "test": "vitest",
     "format": "prettier . --check",
     "format:fix": "prettier . --write",
-    "check": "npm run lint && npm run format",
+    "check": "npm run lint && npm run format && vitest run",
     "prepare": "husky install"
   },
   "keywords": [],
   "author": "Quan Bach <long_quan_bach@hotmail.com> (https://github.com/lqbach/)",
   "license": "MIT",
   "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@types/node": "^20.9.0",
     "eslint": "^8.53.0",
+    "husky": "^8.0.0",
     "lerna": "^7.4.2",
     "prettier": "^3.1.0",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
-    "husky": "^8.0.0"
+    "vitest": "^0.34.6"
   }
 }
