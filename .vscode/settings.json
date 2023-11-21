@@ -5,5 +5,7 @@
   // Tell the ESLint plugin to run on save
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
+  },
+
+  "eslint.experimental.useFlatConfig": true
 }

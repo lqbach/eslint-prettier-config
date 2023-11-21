@@ -1,18 +1,19 @@
 export interface ConfigParams {
+  json?: boolean
+  markdown?: boolean
+  perfectionist?: boolean
+  react?: boolean
   typescript?: boolean
   vue?: boolean
-  react?: boolean
-  json?: boolean
   yaml?: boolean
-  markdown?: boolean
 }
 
 export interface LanguageOptions {
   ecmaVersion?: string
-  sourceType?: string
   globals?: object
   parser?: object
   parserOptions?: object
+  sourceType?: string
 }
 
 export interface LinterOptions {
@@ -25,8 +26,8 @@ export interface ConfigObject {
   ignores?: Array<string>
   languageOptions?: LanguageOptions
   linterOptions?: LinterOptions
-  processor?: object
   plugins?: object
+  processor?: object
   rules?: object
   settings?: object
 }

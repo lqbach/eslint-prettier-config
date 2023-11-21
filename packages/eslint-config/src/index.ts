@@ -8,6 +8,7 @@ import {
   parserVue,
   parserYaml,
   pluginJsonc,
+  pluginPerfectionist,
   pluginReact,
   pluginTypeScript,
   pluginUnusedImports,
@@ -51,14 +52,14 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
       files: ["**/*.js", "**/*.mjs"],
       languageOptions: {
         ecmaVersion: 2022,
-        parserOptions: {
-          sourceType: "module",
-        },
         globals: {
           ...globals.browser,
           ...globals.node,
           ...globals.es6,
           ...globals.commonjs,
+        },
+        parserOptions: {
+          sourceType: "module",
         },
       },
       plugins: {
@@ -69,10 +70,10 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
         "unused-imports/no-unused-vars": [
           "warn",
           {
-            vars: "all",
-            varsIgnorePattern: "^_",
             args: "after-used",
             argsIgnorePattern: "^_",
+            vars: "all",
+            varsIgnorePattern: "^_",
           },
         ],
       },
@@ -135,39 +136,56 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
 
   // YAML Config
   const yamlConfig: ConfigObject =
-    params.yaml ?? false
+    params.yaml ?? true
       ? {
           files: ["**/*.{yaml, yml}"],
           languageOptions: {
             parser: parserYaml,
           },
           plugins: {
-            yaml: pluginYaml,
+            yml: pluginYaml,
           },
           rules: {
-            ...pluginYaml.configs["standard"],
-            ...pluginYaml.configs["prettier"],
+            ...pluginYaml.configs["standard"].rules,
+            ...pluginYaml.configs["prettier"].rules,
           },
         }
       : {}
 
   // JSONC Config
-  const jsoncConfig: ConfigObject =
-    params.json ?? false
-      ? {
-          files: ["**/*.{json, json5, jsonc}"],
-          languageOptions: {
-            parser: parserJsonc,
+  const jsoncConfig: Array<ConfigObject> =
+    params.json ?? true
+      ? [
+          {
+            plugins: {
+              jsonc: pluginJsonc,
+            },
           },
+          {
+            files: ["**/*.{json, json5, jsonc}"],
+            languageOptions: {
+              parser: parserJsonc,
+            },
+            rules: {
+              ...pluginJsonc.configs["recommended-with-json"].rules,
+              ...pluginJsonc.configs["recommended-with-jsonc"].rules,
+              ...pluginJsonc.configs["recommended-with-json5"].rules,
+              ...pluginJsonc.configs["prettier"].rules,
+              "jsonc/no-comments": "off",
+            },
+          },
+        ]
+      : []
+
+  // Perfectionist Config
+  const perfectionistConfig: ConfigObject =
+    params.perfectionist ?? true
+      ? {
           plugins: {
-            jsonc: pluginJsonc,
+            perfectionist: pluginPerfectionist,
           },
           rules: {
-            ...pluginJsonc.configs.base,
-            ...pluginJsonc.configs["recommended-with-json"],
-            ...pluginJsonc.configs["recommended-with-jsonc"],
-            ...pluginJsonc.configs["recommended-with-json5"],
-            ...pluginJsonc.configs["prettier"],
+            ...pluginPerfectionist.configs["recommended-natural"].rules,
           },
         }
       : {}
@@ -181,7 +199,8 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
   config.push(reactConfig)
   config.push(vueConfig)
   config.push(yamlConfig)
-  config.push(jsoncConfig)
+  config.push(...jsoncConfig)
+  config.push(perfectionistConfig)
   config.push(prettierConfig)
 
   return config
