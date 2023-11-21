@@ -1,5 +1,31 @@
 # Changelog
 
+## [0.3.0](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.2.2...eslint-config-v0.3.0) (2023-11-21)
+
+
+### Features 🚀
+
+* add jsonc eslint config ([f07b3c3](https://github.com/lqbach/eslint-prettier-config/commit/f07b3c359d12e2e5564aa388750e4d738c6afab3))
+* add perfectionist sorting for eslint ([b2d8205](https://github.com/lqbach/eslint-prettier-config/commit/b2d8205314b5fe72675afd87a960864018e10782))
+* add yaml config ([f02ae29](https://github.com/lqbach/eslint-prettier-config/commit/f02ae29b2c4ed47d9cb50c81e860ce87bb6d7897))
+* prettier sorted imports ([c12ede2](https://github.com/lqbach/eslint-prettier-config/commit/c12ede2941863b767810495ee8b5c3cc6691e430))
+
+
+### Chores 🧹
+
+* add husky pre-commit ([db5cdfa](https://github.com/lqbach/eslint-prettier-config/commit/db5cdfa5ce036cebbdbf1edd23885aa1719c27cd))
+* add licensing to package ([e18f4f3](https://github.com/lqbach/eslint-prettier-config/commit/e18f4f36cf44fac1da5906094f2dc9ca2ea2f2d9))
+
+
+### Miscellaneous
+
+* update the configuration architecture of configs ([8e77c83](https://github.com/lqbach/eslint-prettier-config/commit/8e77c838251dd60d9d682d0cb8208dae4679c6f3))
+
+
+### Documentation 📝
+
+* align badges ([8e7c4e1](https://github.com/lqbach/eslint-prettier-config/commit/8e7c4e1bcbd7ac7321ae02b21ce0ccf19e70a471))
+
 ## [0.2.2](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.2.1...eslint-config-v0.2.2) (2023-11-14)
 
 ### Documentation 📝
