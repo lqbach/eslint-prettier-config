@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.3.0...eslint-config-v0.3.1) (2023-11-22)
+
+
+### Bug Fixes 🐛
+
+* added main export to package ([5fa1fcc](https://github.com/lqbach/eslint-prettier-config/commit/5fa1fccf954a61ae353ac74f66925f18fcb744ec))
+
 ## [0.3.0](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.2.2...eslint-config-v0.3.0) (2023-11-21)
 
 
