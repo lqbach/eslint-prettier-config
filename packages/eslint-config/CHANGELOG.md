@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.2](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.3.1...eslint-config-v0.3.2) (2023-11-22)
+
+
+### Bug Fixes 🐛
+
+* prettier formatting ([5322091](https://github.com/lqbach/eslint-prettier-config/commit/53220914a5abc6a9d072a671e9b78274a08478b8))
+
 ## [0.3.1](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.3.0...eslint-config-v0.3.1) (2023-11-22)
 
 
