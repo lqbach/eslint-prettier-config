@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.3](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.3.2...eslint-config-v0.3.3) (2023-11-22)
+
+
+### Bug Fixes 🐛
+
+* add processor api to vue plugin ([9883a01](https://github.com/lqbach/eslint-prettier-config/commit/9883a01ff504e67ea3fad1803cb9afb8d04b0455))
+
 ## [0.3.2](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.3.1...eslint-config-v0.3.2) (2023-11-22)
 
 
