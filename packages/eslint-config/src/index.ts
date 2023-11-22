@@ -126,6 +126,9 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
               sourceType: "module",
             },
           },
+          plugins: {
+            vue: pluginVue,
+          },
           rules: {
             ...pluginVue.configs["base"].rules,
             ...pluginVue.configs["vue3-essential"].rules,
