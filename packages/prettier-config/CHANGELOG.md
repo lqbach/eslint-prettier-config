@@ -1,5 +1,26 @@
 # Changelog
 
+## [0.3.0](https://github.com/lqbach/eslint-prettier-config/compare/prettier-config-v0.2.2...prettier-config-v0.3.0) (2023-11-21)
+
+
+### Features 🚀
+
+* add perfectionist sorting for eslint ([b2d8205](https://github.com/lqbach/eslint-prettier-config/commit/b2d8205314b5fe72675afd87a960864018e10782))
+* prettier sorted imports ([c12ede2](https://github.com/lqbach/eslint-prettier-config/commit/c12ede2941863b767810495ee8b5c3cc6691e430))
+* remove import sorting with Prettier ([e099751](https://github.com/lqbach/eslint-prettier-config/commit/e099751d8349b561a15df711e09cfc6763e6b48a))
+
+
+### Chores 🧹
+
+* add husky pre-commit ([db5cdfa](https://github.com/lqbach/eslint-prettier-config/commit/db5cdfa5ce036cebbdbf1edd23885aa1719c27cd))
+* add licensing to package ([e18f4f3](https://github.com/lqbach/eslint-prettier-config/commit/e18f4f36cf44fac1da5906094f2dc9ca2ea2f2d9))
+* add peerDependency for prettier plugin sort ([bf72608](https://github.com/lqbach/eslint-prettier-config/commit/bf72608f71af816b29825ae914514565870f5a84))
+
+
+### Documentation 📝
+
+* align badges ([8e7c4e1](https://github.com/lqbach/eslint-prettier-config/commit/8e7c4e1bcbd7ac7321ae02b21ce0ccf19e70a471))
+
 ## [0.2.2](https://github.com/lqbach/eslint-prettier-config/compare/prettier-config-v0.2.1...prettier-config-v0.2.2) (2023-11-14)
 
 ### Documentation 📝
