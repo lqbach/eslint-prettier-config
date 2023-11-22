@@ -129,6 +129,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
           plugins: {
             vue: pluginVue,
           },
+          processor: pluginVue.processors[".vue"],
           rules: {
             ...pluginVue.configs["base"].rules,
             ...pluginVue.configs["vue3-essential"].rules,
