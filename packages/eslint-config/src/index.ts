@@ -105,6 +105,17 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
     params.react ?? false
       ? {
           files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
+          languageOptions: {
+            globals: {
+              ...globals.serviceworker,
+              ...globals.browser,
+            },
+            parserOptions: {
+              ecmaFeatures: {
+                jsx: true,
+              },
+            },
+          },
           plugins: {
             react: pluginReact,
           },
