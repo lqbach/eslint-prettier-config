@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.4](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.3.3...eslint-config-v0.3.4) (2023-11-28)
+
+
+### Bug Fixes 🐛
+
+* add types in declaration file and tweaked react config ([1bc30e4](https://github.com/lqbach/eslint-prettier-config/commit/1bc30e4f2735546a6eab2f37651a70b469e9f658))
+
 ## [0.3.3](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.3.2...eslint-config-v0.3.3) (2023-11-22)
 
 
