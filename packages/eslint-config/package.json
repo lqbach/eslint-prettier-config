@@ -37,7 +37,7 @@
     "vue-eslint-parser": "^9.3.2",
     "yaml-eslint-parser": "^1.2.2"
   },
-  "devDependencies": {
+  "peerDependencies": {
     "eslint": "^8.53.0"
   }
 }
