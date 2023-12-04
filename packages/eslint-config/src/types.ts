@@ -1,4 +1,5 @@
 export interface ConfigParams {
+  ignores?: Array<string>
   json?: boolean
   markdown?: boolean
   perfectionist?: boolean
