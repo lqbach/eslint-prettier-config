@@ -17,7 +17,8 @@
     - [yarn](#yarn)
     - [npm](#npm)
   - [Setup](#setup)
-  - [VSCode](#vscode)
+  - [VSCode Support](#vscode-support)
+- [Features](#features)
 
 ## Usage
 
@@ -52,7 +53,7 @@ import eslintConfig from "@lqbach/eslint-config"
 export default eslintConfig()
 ```
 
-### VSCode
+### VSCode Support
 
 Visual Studio Code has an [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) (or search _`dbaeumer.vscode-eslint`_ in the Extension Marketplace search bar) that supports rich editing features. This will help lint file saves and provide linting documentation in the code.
 The following should be added to `.vscode/settings.json` at the root of your project:
@@ -71,3 +72,5 @@ The following should be added to `.vscode/settings.json` at the root of your pro
   "eslint.experimental.useFlatConfig": true
 }
 ```
+
+## Features
