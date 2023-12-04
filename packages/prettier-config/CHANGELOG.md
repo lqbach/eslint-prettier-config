@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/lqbach/eslint-prettier-config/compare/prettier-config-v0.3.4...prettier-config-v0.4.0) (2023-12-04)
+
+
+### Features 🚀
+
+* add README to `eslint-config` package ([#11](https://github.com/lqbach/eslint-prettier-config/issues/11)) ([8bcf82d](https://github.com/lqbach/eslint-prettier-config/commit/8bcf82dd94ceeb5f42e5807b46a682586e41b937))
+
 ## [0.3.4](https://github.com/lqbach/eslint-prettier-config/compare/prettier-config-v0.3.3...prettier-config-v0.3.4) (2023-11-28)
 
 
