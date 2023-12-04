@@ -41,6 +41,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
 
       "**/*.min.*",
       "**/LICENSE*",
+      ...(params.ignores ? params.ignores : []),
     ],
   }
 
