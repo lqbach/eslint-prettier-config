@@ -41,6 +41,10 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
 
       "**/*.min.*",
       "**/LICENSE*",
+
+      "**/web/public",
+      "**/studio/build",
+      "**/studio/.sanity",
       ...(params.ignores ? params.ignores : []),
     ],
   }
@@ -122,6 +126,8 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
           },
           rules: {
             ...pluginReact.configs.recommended.rules,
+            // ignore `css` for emotion usage
+            "react/no-unknown-property": ["error", { ignore: ["css"] }],
           },
         }
       : {}
