@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.4.0...eslint-config-v0.5.0) (2024-08-23)
+
+
+### Features 🚀
+
+* add functionality for emotion css in react ([67ef1e5](https://github.com/lqbach/eslint-prettier-config/commit/67ef1e583370bb53fd10074f5b256fb5fdbca248))
+
 ## [0.4.0](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.3.4...eslint-config-v0.4.0) (2023-12-04)
 
 
