@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/lqbach/eslint-prettier-config/compare/prettier-config-v0.5.0...prettier-config-v0.6.0) (2024-08-26)
+
+
+### Features 🚀
+
+* add prettier tailwind configuration ([da88ac1](https://github.com/lqbach/eslint-prettier-config/commit/da88ac1a5c77d33d50f1530416d06d2b981e8f1e))
+
 ## [0.5.0](https://github.com/lqbach/eslint-prettier-config/compare/prettier-config-v0.4.0...prettier-config-v0.5.0) (2024-08-23)
 
 
