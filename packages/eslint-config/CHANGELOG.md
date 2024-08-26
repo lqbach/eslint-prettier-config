@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.5.0...eslint-config-v0.6.0) (2024-08-26)
+
+
+### Chores 🧹
+
+* **eslint-config:** Synchronize ESLint Prettier Configuration versions
+
 ## [0.5.0](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.4.0...eslint-config-v0.5.0) (2024-08-23)
 
 
