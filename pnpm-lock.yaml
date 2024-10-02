@@ -74,9 +74,6 @@ importers:
       remove:
         specifier: ^0.1.5
         version: 0.1.5
-      typescript:
-        specifier: ^5.6.0
-        version: 5.6.2
       vue-eslint-parser:
         specifier: ^9.3.2
         version: 9.3.2(eslint@9.11.1)
