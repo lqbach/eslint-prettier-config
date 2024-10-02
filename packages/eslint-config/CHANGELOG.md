@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.6.0...eslint-config-v0.6.1) (2024-10-02)
+
+
+### Bug Fixes 🐛
+
+* update recommended rules for react ([2ae610f](https://github.com/lqbach/eslint-prettier-config/commit/2ae610f9106287dbd9be8e16ef58c8e5f8248eb6))
+
 ## [0.6.0](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.5.0...eslint-config-v0.6.0) (2024-08-26)
 
 
