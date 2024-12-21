@@ -8,8 +8,10 @@ import {
   parserVue,
   parserYaml,
   pluginJsonc,
+  pluginNext,
   pluginPerfectionist,
   pluginReact,
+  pluginReactHooks,
   pluginTypeScript,
   pluginUnusedImports,
   pluginVue,
@@ -45,8 +47,11 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
       "**/web/public",
       "**/studio/build",
       "**/studio/.sanity",
+
+      ...(params.next ? ["**/.next"] : []),
       ...(params.ignores ? params.ignores : []),
     ],
+    name: "lqbach/ignores",
   }
 
   //JavaScript Config
@@ -66,6 +71,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
           sourceType: "module",
         },
       },
+      name: "lqbach/javascript",
       plugins: {
         "unused-imports": pluginUnusedImports,
       },
@@ -95,6 +101,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
               sourceType: "module",
             },
           },
+          name: "lqbach/typescript",
           plugins: {
             "@typescript-eslint": pluginTypeScript,
           },
@@ -106,7 +113,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
 
   // React Config: turned off by default
   const reactConfig: ConfigObject =
-    (params.react ?? false)
+    ((params.next || params.react) ?? false)
       ? {
           files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
           languageOptions: {
@@ -120,6 +127,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
               },
             },
           },
+          name: "lqbach/react",
           plugins: {
             react: pluginReact,
           },
@@ -127,6 +135,22 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
             ...pluginReact.configs.flat.recommended.rules,
             // ignore `css` for emotion usage
             "react/no-unknown-property": ["error", { ignore: ["css"] }],
+          },
+        }
+      : {}
+
+  const reactHooksConfig: ConfigObject =
+    ((params.next ||
+      (typeof params.react !== "boolean" && params.react?.hooks === true)) ??
+    false)
+      ? {
+          files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
+          name: "lqbach/react-hooks",
+          plugins: {
+            "react-hooks": pluginReactHooks,
+          },
+          rules: {
+            ...pluginReactHooks.configs.recommended.rules,
           },
         }
       : {}
@@ -143,6 +167,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
               sourceType: "module",
             },
           },
+          name: "lqbach/vue",
           plugins: {
             vue: pluginVue,
           },
@@ -155,6 +180,30 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
         }
       : {}
 
+  // NextJS Config
+  const nextConfig: ConfigObject =
+    (params.next ?? false)
+      ? {
+          files: ["**/*.{js,jsx,ts,tsx}"],
+          name: "lqbach/next",
+          plugins: {
+            "@next/next": pluginNext,
+          },
+          rules: {
+            ...pluginNext.configs.recommended.rules,
+            ...pluginNext.configs["core-web-vitals"].rules,
+          },
+          ...(typeof params.next !== "boolean" &&
+            params.next?.rootDir && {
+              settings: {
+                nextjs: {
+                  rootDir: params.next.rootDir,
+                },
+              },
+            }),
+        }
+      : {}
+
   // YAML Config
   const yamlConfig: ConfigObject =
     (params.yaml ?? true)
@@ -163,6 +212,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
           languageOptions: {
             parser: parserYaml,
           },
+          name: "lqbach/yaml",
           plugins: {
             yml: pluginYaml,
           },
@@ -178,6 +228,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
     (params.json ?? true)
       ? [
           {
+            name: "lqbach/jsonc-plugin",
             plugins: {
               jsonc: pluginJsonc,
             },
@@ -187,6 +238,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
             languageOptions: {
               parser: parserJsonc,
             },
+            name: "lqbach/json",
             rules: {
               ...pluginJsonc.configs["recommended-with-json"].rules,
               ...pluginJsonc.configs["recommended-with-jsonc"].rules,
@@ -202,6 +254,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
   const perfectionistConfig: ConfigObject =
     (params.perfectionist ?? true)
       ? {
+          name: "lqbach/perfectionist",
           plugins: {
             perfectionist: pluginPerfectionist,
           },
@@ -218,7 +271,9 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
   config.push(...javascriptConfig)
   config.push(typescriptConfig)
   config.push(reactConfig)
+  config.push(reactHooksConfig)
   config.push(vueConfig)
+  config.push(nextConfig)
   config.push(yamlConfig)
   config.push(...jsoncConfig)
   config.push(perfectionistConfig)

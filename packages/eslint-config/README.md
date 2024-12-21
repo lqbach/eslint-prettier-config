@@ -21,6 +21,7 @@
 - [Features](#features)
   - [Ignoring Files](#ignoring-files)
   - [React and Vue](#react-and-vue)
+  - [NextJS](#nextjs)
 
 ## Usage
 
@@ -108,5 +109,23 @@ export default eslintConfig({
 
   // uncomment below and comment above to use react
   // react: true,
+})
+```
+
+### NextJS
+
+NextJS has options for parameters. The following parameters are supported:
+
+```js
+// eslint.config.js
+import eslintConfig from "@lqbach/eslint-config"
+
+export default eslintConfig({
+  next: {
+    rootDir: "packages/example", //set the root directory of next project, useful for monorepo
+  },
+
+  // can also use boolean for default configuration
+  // next: true,
 })
 ```

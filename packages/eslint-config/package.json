@@ -21,12 +21,14 @@
     "build": "tsup src/index.ts --format esm,cjs --clean --dts"
   },
   "dependencies": {
+    "@next/eslint-plugin-next": "^15.1.2",
     "@typescript-eslint/eslint-plugin": "^8.18.0",
     "@typescript-eslint/parser": "^8.18.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jsonc": "^2.16.0",
     "eslint-plugin-perfectionist": "^3.8.0",
     "eslint-plugin-react": "^7.37.1",
+    "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-unused-imports": "^4.1.4",
     "eslint-plugin-vue": "^9.28.0",
     "eslint-plugin-yml": "^1.14.0",
