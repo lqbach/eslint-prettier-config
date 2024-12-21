@@ -1,11 +1,10 @@
 {
   // Format on save with Prettier rules
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
 
   // Tell the ESLint plugin to run on save
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
-
-  "eslint.experimental.useFlatConfig": true
+    "source.fixAll.eslint": "always"
+  }
 }

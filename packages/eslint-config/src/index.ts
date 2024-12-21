@@ -86,7 +86,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
 
   // TypeScript Config
   const typescriptConfig: ConfigObject =
-    params.typescript ?? true
+    (params.typescript ?? true)
       ? {
           files: ["**/*.{ts,tsx}"],
           languageOptions: {
@@ -106,7 +106,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
 
   // React Config: turned off by default
   const reactConfig: ConfigObject =
-    params.react ?? false
+    (params.react ?? false)
       ? {
           files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
           languageOptions: {
@@ -133,7 +133,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
 
   // Vue Config: turned off by default
   const vueConfig: ConfigObject =
-    params.vue ?? false
+    (params.vue ?? false)
       ? {
           files: ["**/*.vue"],
           languageOptions: {
@@ -157,7 +157,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
 
   // YAML Config
   const yamlConfig: ConfigObject =
-    params.yaml ?? true
+    (params.yaml ?? true)
       ? {
           files: ["**/*.{yaml, yml}"],
           languageOptions: {
@@ -175,7 +175,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
 
   // JSONC Config
   const jsoncConfig: Array<ConfigObject> =
-    params.json ?? true
+    (params.json ?? true)
       ? [
           {
             plugins: {
@@ -200,7 +200,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
 
   // Perfectionist Config
   const perfectionistConfig: ConfigObject =
-    params.perfectionist ?? true
+    (params.perfectionist ?? true)
       ? {
           plugins: {
             perfectionist: pluginPerfectionist,
