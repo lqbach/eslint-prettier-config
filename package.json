@@ -16,7 +16,7 @@
   "author": "Quan Bach <long_quan_bach@hotmail.com> (https://github.com/lqbach/)",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^20.9.0",
+    "@types/node": "^22.10.0",
     "eslint": "^9.11.0",
     "husky": "^8.0.0",
     "lerna": "^7.4.2",
