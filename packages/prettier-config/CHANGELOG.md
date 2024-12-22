@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.7.0](https://github.com/lqbach/eslint-prettier-config/compare/prettier-config-v0.6.1...prettier-config-v0.7.0) (2024-12-22)
+
+
+### Bug Fixes 🐛
+
+* add `composite=true` to tsconfig files ([#15](https://github.com/lqbach/eslint-prettier-config/issues/15)) ([965d40e](https://github.com/lqbach/eslint-prettier-config/commit/965d40eac4ac5c1071c421aadd5e54c6c2e634be))
+* remove composite true setting ([e604a78](https://github.com/lqbach/eslint-prettier-config/commit/e604a78fe24f417fcc4c82d678ebc4be7fd8e1d5))
+
+
+### Chores 🧹
+
+* upgrade prettier in subpackages ([3e60af5](https://github.com/lqbach/eslint-prettier-config/commit/3e60af54a2d7e79cfc1b9c6ee3901db88d9161b3))
+
 ## [0.6.1](https://github.com/lqbach/eslint-prettier-config/compare/prettier-config-v0.6.0...prettier-config-v0.6.1) (2024-10-02)
 
 

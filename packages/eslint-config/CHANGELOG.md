@@ -1,5 +1,30 @@
 # Changelog
 
+## [0.7.0](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.6.1...eslint-config-v0.7.0) (2024-12-22)
+
+
+### Features 🚀
+
+* add nextjs config ([#18](https://github.com/lqbach/eslint-prettier-config/issues/18)) ([423b1b2](https://github.com/lqbach/eslint-prettier-config/commit/423b1b28dc519ff24d5824e7e1c0d3f60db083df))
+
+
+### Bug Fixes 🐛
+
+* add `composite=true` to tsconfig files ([#15](https://github.com/lqbach/eslint-prettier-config/issues/15)) ([965d40e](https://github.com/lqbach/eslint-prettier-config/commit/965d40eac4ac5c1071c421aadd5e54c6c2e634be))
+* remove `remove` package ([5655b9b](https://github.com/lqbach/eslint-prettier-config/commit/5655b9bf822c8fc8ff27b66e13c7170ccfca534b))
+* remove composite true setting ([e604a78](https://github.com/lqbach/eslint-prettier-config/commit/e604a78fe24f417fcc4c82d678ebc4be7fd8e1d5))
+* update types in eslint-config ([0f3afd4](https://github.com/lqbach/eslint-prettier-config/commit/0f3afd405bd1b930c74ad3272d113de0639e073e))
+
+
+### Chores 🧹
+
+* upgrade prettier in subpackages ([3e60af5](https://github.com/lqbach/eslint-prettier-config/commit/3e60af54a2d7e79cfc1b9c6ee3901db88d9161b3))
+
+
+### Tests 🧪
+
+* add ignore tests ([#17](https://github.com/lqbach/eslint-prettier-config/issues/17)) ([503837b](https://github.com/lqbach/eslint-prettier-config/commit/503837b49572bb8a5108f8f4316907ebdca7e83b))
+
 ## [0.6.1](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.6.0...eslint-config-v0.6.1) (2024-10-02)
 
 
