@@ -132,7 +132,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
             react: pluginReact,
           },
           rules: {
-            ...pluginReact.configs.flat.recommended.rules,
+            ...pluginReact.configs.flat?.recommended.rules,
             // ignore `css` for emotion usage
             "react/no-unknown-property": ["error", { ignore: ["css"] }],
           },

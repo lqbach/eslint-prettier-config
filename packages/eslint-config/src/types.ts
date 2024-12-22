@@ -11,7 +11,7 @@ export interface ConfigParams {
 }
 
 export interface LanguageOptions {
-  ecmaVersion?: string
+  ecmaVersion?: number | string
   globals?: object
   parser?: object
   parserOptions?: object
