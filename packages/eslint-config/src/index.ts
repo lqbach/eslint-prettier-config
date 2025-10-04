@@ -7,6 +7,7 @@ import {
   parserTypeScript,
   parserVue,
   parserYaml,
+  pluginAstro,
   pluginJsonc,
   pluginNext,
   pluginPerfectionist,
@@ -265,6 +266,37 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
         }
       : {}
 
+  // Astro Config
+  const astroConfig: ConfigObject =
+    (params.astro ?? false)
+      ? {
+          files: ["**/*.astro"],
+          languageOptions: {
+            parserOptions: params.typescript
+              ? {
+                  extraFileExtensions: [".astro"],
+                  parser: parserTypeScript,
+                  sourceType: "module",
+                }
+              : {},
+          },
+          name: "lqbach/astro",
+          plugins: {
+            astro: pluginAstro,
+          },
+          rules: {
+            "astro/missing-client-only-directive-value": "error",
+            "astro/no-conflict-set-directives": "error",
+            "astro/no-deprecated-astro-canonicalurl": "error",
+            "astro/no-deprecated-astro-fetchcontent": "error",
+            "astro/no-deprecated-astro-resolve": "error",
+            "astro/no-deprecated-getentrybyslug": "error",
+            "astro/no-unused-define-vars-in-style": "error",
+            "astro/valid-compile": "error",
+          },
+        }
+      : {}
+
   const prettierConfig: ConfigObject = configPrettier
 
   let config: Array<ConfigObject> = []
@@ -275,6 +307,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
   config.push(reactHooksConfig)
   config.push(vueConfig)
   config.push(nextConfig)
+  config.push(astroConfig)
   config.push(yamlConfig)
   config.push(...jsoncConfig)
   config.push(perfectionistConfig)

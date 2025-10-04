@@ -1,3 +1,7 @@
+export interface AstroConfigParams {
+  typescript?: boolean
+}
+
 export interface ConfigObject {
   files?: Array<string>
   ignores?: Array<string>
@@ -12,6 +16,7 @@ export interface ConfigObject {
 }
 
 export interface ConfigParams {
+  astro?: AstroConfigParams | boolean
   ignores?: Array<string>
   json?: boolean
   markdown?: boolean
