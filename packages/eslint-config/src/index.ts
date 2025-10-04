@@ -150,7 +150,8 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
             "react-hooks": pluginReactHooks,
           },
           rules: {
-            ...pluginReactHooks.configs.recommended.rules,
+            "react-hooks/exhaustive-deps": "warn",
+            "react-hooks/rules-of-hooks": "error",
           },
         }
       : {}
@@ -174,8 +175,8 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
           processor: pluginVue.processors[".vue"],
           rules: {
             ...pluginVue.configs["base"].rules,
-            ...pluginVue.configs["vue3-essential"].rules,
-            ...pluginVue.configs["vue3-strongly-recommended"].rules,
+            ...pluginVue.configs["essential"].rules,
+            ...pluginVue.configs["strongly-recommended"].rules,
           },
         }
       : {}

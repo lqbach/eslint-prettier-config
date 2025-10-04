@@ -1,3 +1,16 @@
+export interface ConfigObject {
+  files?: Array<string>
+  ignores?: Array<string>
+  languageOptions?: LanguageOptions
+  linterOptions?: LinterOptions
+  name?: string
+  plugins?: object
+  processor?: object
+  rules?: object
+  // eslint-disable-next-line
+  settings?: any
+}
+
 export interface ConfigParams {
   ignores?: Array<string>
   json?: boolean
@@ -21,19 +34,6 @@ export interface LanguageOptions {
 export interface LinterOptions {
   noInlineConfig?: boolean
   reportUnusedDisableDirectives?: boolean
-}
-
-export interface ConfigObject {
-  files?: Array<string>
-  ignores?: Array<string>
-  languageOptions?: LanguageOptions
-  linterOptions?: LinterOptions
-  name?: string
-  plugins?: object
-  processor?: object
-  rules?: object
-  // eslint-disable-next-line
-  settings?: any
 }
 
 export interface NextJSConfigParams {
