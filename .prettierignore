@@ -2,3 +2,4 @@ pnpm-lock.yaml
 package-lock.json
 CHANGELOG.md
 .release-please-manifest.json
+/.nx/workspace-data
