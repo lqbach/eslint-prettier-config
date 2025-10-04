@@ -10,7 +10,7 @@
     "format": "prettier . --check",
     "format:fix": "prettier . --write",
     "check": "npm run lint && npm run format && vitest run",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "Quan Bach <long_quan_bach@hotmail.com> (https://github.com/lqbach/)",
