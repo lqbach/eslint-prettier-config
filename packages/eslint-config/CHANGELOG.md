@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.0](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.7.0...eslint-config-v0.8.0) (2025-10-04)
+
+
+### Features 🚀
+
+* add astro ([eabb4b0](https://github.com/lqbach/eslint-prettier-config/commit/eabb4b0923608c5c3964cf149e40f0a88d08dc0e))
+* add mise file ([#19](https://github.com/lqbach/eslint-prettier-config/issues/19)) ([fbd6061](https://github.com/lqbach/eslint-prettier-config/commit/fbd60615fb30c310d6b38d1cdc875ba9f21f6684))
+
 ## [0.7.0](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.6.1...eslint-config-v0.7.0) (2024-12-22)
 
 
