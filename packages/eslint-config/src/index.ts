@@ -3,6 +3,7 @@ import globals from "globals"
 import {
   configPrettier,
   jsConfig,
+  parserAstro,
   parserJsonc,
   parserTypeScript,
   parserVue,
@@ -272,6 +273,7 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
       ? {
           files: ["**/*.astro"],
           languageOptions: {
+            parser: parserAstro,
             parserOptions: params.typescript
               ? {
                   extraFileExtensions: [".astro"],
