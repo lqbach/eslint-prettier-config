@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.1](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.8.0...eslint-config-v0.8.1) (2025-10-04)
+
+
+### Bug Fixes 🐛
+
+* add astro parser ([e221ce7](https://github.com/lqbach/eslint-prettier-config/commit/e221ce7b458714b543f869697360fe16741010e0))
+
 ## [0.8.0](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.7.0...eslint-config-v0.8.0) (2025-10-04)
 
 
