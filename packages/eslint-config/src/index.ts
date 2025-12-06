@@ -98,6 +98,11 @@ export default function config(params: ConfigParams = {}): Array<ConfigObject> {
       ? {
           files: ["**/*.{ts,tsx}"],
           languageOptions: {
+            globals: {
+              ...globals.browser,
+              ...globals.node,
+              ...globals.commonjs,
+            },
             parser: parserTypeScript,
             parserOptions: {
               sourceType: "module",
