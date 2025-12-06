@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.8.1...eslint-config-v0.9.0) (2025-12-06)
+
+
+### Features 🚀
+
+* add browser and Node.js globals to typescript config ([91e40c0](https://github.com/lqbach/eslint-prettier-config/commit/91e40c0cdbb45a4d3eb3dc1439c1a884ba91a6e3))
+
 ## [0.8.1](https://github.com/lqbach/eslint-prettier-config/compare/eslint-config-v0.8.0...eslint-config-v0.8.1) (2025-10-04)
 
 
